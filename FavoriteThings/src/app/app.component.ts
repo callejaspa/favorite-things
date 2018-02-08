@@ -1,6 +1,6 @@
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
 import { Component } from '@angular/core';
-import { AngularFireDatabase} from 'angularfire2/database';
 
 import * as firebase from 'firebase/app';
 @Component({
@@ -13,11 +13,10 @@ export class AppComponent {
   favoriteColor: string = 'pink';
   favoriteNumber = 42;
 
-constructor(db: AngularFireDatabase) {
+constructor(db: AngularFirestoreModule) {
 
 }
   setColor(selectedColor: string): void{
-    //console.log("You selected the color " + selectedColor);
     firebase.database().ref().child("color").set(selectedColor);
   }
 
