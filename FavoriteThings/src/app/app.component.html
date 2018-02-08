@@ -6,7 +6,7 @@
 </div>
 
 <hr>
-<h2> Favorite Sport </h2>
+<h2> Favorite Color </h2>
 <div id="box" [style.backgroundColor]="favoriteColor"> {{favoriteColor}} </div>
 <button type="button" (click)="setColor('blue')"> Blue </button>
 <button type="button" (click)="setColor('green')"> Green </button>
@@ -16,7 +16,10 @@
 <br>
 <button type="button" (click)="updateColor()">Update</button>
 <hr>
-<h2> Favorite Color </h2>
+<h2> Favorite Number = {{favoriteNumber}}</h2>
+<button type="button" (click)="setNumber(favoriteNumber + 1)">Up</button>
+<button type="button" (click)="setNumber(favoriteNumber - 1)">Down</button>
+<button type="button" (click)="setNumber(0)">Reset</button>
 
 
 <hr>
