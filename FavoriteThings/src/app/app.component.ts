@@ -17,7 +17,7 @@ constructor(db: AngularFirestoreModule) {
 
 }
   setColor(selectedColor: string): void{
-    firebase.database().ref().child("color").set(selectedColor);
+    var database = firebase.database().ref().child("color").set(selectedColor);
   }
 
   updateColor(): void {
