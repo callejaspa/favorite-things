@@ -1,5 +1,6 @@
+import { AngularFireModule } from 'angularfire2';
 import { Component } from '@angular/core';
-
+import { AngularFireDatabase} from 'angularfire2/database';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,6 +11,9 @@ export class AppComponent {
   favoriteColor: string = 'pink';
   favoriteNumber = 42;
 
+constructor(db: AngularFireDatabase) {
+  
+}
   setColor(selectedColor: string): void{
     console.log("You selected the color " + selectedColor);
     this.favoriteColor = selectedColor;
