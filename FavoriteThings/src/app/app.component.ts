@@ -1,5 +1,5 @@
-import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { Component } from '@angular/core';
 
 import * as firebase from 'firebase/app';
@@ -13,15 +13,19 @@ export class AppComponent {
   favoriteColor: string = 'pink';
   favoriteNumber = 42;
 
-constructor(db: AngularFirestoreModule) {
+constructor(db: AngularFireDatabase) {
 
 }
   setColor(selectedColor: string): void{
-    var database = firebase.database().ref().child("color").set(selectedColor);
+    firebase.database().ref().child('color').set(selectedColor);
   }
 
   updateColor(): void {
     console.log("TODO:Update the color");
+    firebase.database().ref().child('color').once('value', 
+    (snapshot: firebase.database.DataSnapshot) => {
+      this.favoriteColor = snapshot.val();
+    });
   }
 
   setNumber(favoriteNumber: number): void {

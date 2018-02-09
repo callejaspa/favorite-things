@@ -6,11 +6,11 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyDN_lFtc7G3-BlTu53vm2UfgLOFdSfmdNw",
-    authDomain: "callejaspaa.firebaseapp.com",
-    databaseURL: "https://callejaspaa.firebaseio.com",
-    projectId: "callejaspaa",
-    storageBucket: "callejaspaa.appspot.com",
-    messagingSenderId: "381300116306"
+    apiKey: "AIzaSyD2ABL4kcdN8aNcnLwpKml7pqtSdZ4UgK4",
+    authDomain: "callejas-default.firebaseapp.com",
+    databaseURL: "https://callejas-default.firebaseio.com",
+    projectId: "callejas-default",
+    storageBucket: "callejas-default.appspot.com",
+    messagingSenderId: "812031918181"
   },
 };
